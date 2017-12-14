@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="counter.css">
+    <script src="counter.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <div id="counter">
+        <div id="head">
+            <p>简易计算器</p>
+        </div>
+        <form name="counter" action="" method="get">
+            <!--配置显示窗口，使用onfocus='this.blur()'避免键盘输入-->
+            <div id="calcu-screen">
+                <input type="text" name="numScreen" class="screen" value="0" onfocus="this.blur()"/>
+            </div>
+            <!--配置按钮-->
+            <div id="calcu-btn">
+                <ul>
+                    <li onclick="command(7)"><a>7</a></li>
+                    <li onclick="command(8)"><a>8</a></li>
+                    <li onclick="command(9)"><a>9</a></li>
+                    <li onclick="backspace()"><a>←</a></li>
+                    <li onclick="del()"><a>C</a></li>
+                </ul>
+                <ul>
+                    <li onclick="command(4)"><a>4</a></li>
+                    <li onclick="command(5)"><a>5</a></li>
+                    <li onclick="command(6)"><a>6</a></li>
+                    <li onclick="multi()"><a>×</a></li>
+                    <li onclick="divide()"><a>÷</a></li>
+                </ul>
+                <ul>
+                    <li onclick="command(1)"><a>1</a></li>
+                    <li onclick="command(2)"><a>2</a></li>
+                    <li onclick="command(3)"><a>3</a></li>
+                    <li onclick="plus()"><a>＋</a></li>
+                    <li onclick="minus()"><a>－</a></li>
+                </ul>
+                <ul>
+                    <li onclick="command(0)"><a>0</a></li>
+                    <li onclick="dzero()"><a>00</a></li>
+                    <li onclick="dot()"><a>.</a></li>
+                    <ul>
+                    <li class="dengyu" onclick="equal()" style="width: 90px;"><a>=</a></li></ul>
+                </ul>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
